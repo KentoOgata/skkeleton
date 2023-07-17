@@ -322,7 +322,7 @@ userJisyo                                     *skkeleton-config-userJisyo*
 
 ------------------------------------------------------------------------------
                                               *skkeleton#register_kanatable()*
-skkeleton#register_kanatable({tableName}, {table}, {create})
+skkeleton#register_kanatable({tableName}, {table} [, {create}])
         仮名入力のテーブルを登録できます。
         {tableName}で指定したテーブルに{table}で指定した辞書の定義が登録されま
         す。{create}が指定されていない場合は存在しないテーブル名を指定すると
@@ -485,10 +485,18 @@ CHANGELOG                                                *skkeleton-changelog*
 2023-01-21~
 - ロジックの問題により<Enter>表記の使用を禁止
 
+
+2022-12-18~
+- Lua APIからautoload変数を操作した際におかしくなっていた(thanks @uga-rosa)
+
+* 調べて埋める *
+
 2022-04-25~
 - 補完ハンドリングの修正
   - キーを奪うのをやめた
 - tabCompletionオプションの削除
+
+* 調べて埋める *
 
 2022-03-27~
 - |skkeleton#register_kanatable()|の一部要素を省略可能にした
@@ -496,10 +504,14 @@ CHANGELOG                                                *skkeleton-changelog*
 2022-03-24~
 - abbrevモードを追加
 
+* 調べて埋める *
+
 2022-02-28~
 - カタカナ変換などの際に送り仮名がひらがなになっていたので修正
 
 2022-02-27~
 - |skkeleton-config-completionRankFile|オプションの追加
+
+* 調べて埋める *
 
 vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
